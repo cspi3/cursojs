@@ -1,0 +1,71 @@
+git init  #Creacion de repositorio sobre un directorio. Solo se hace la primera vez al generarlo
+
+git clone <ruta al repositorio> #Clonar (copiar) y hacer checkout del repositorio. No hace falta ni crear el directorio ni hacer git.init
+
+git init --bare --shared #Con este comendo se crea un repositorio vacio para ser compartido remotamente
+
+git commit -a -m "primera subida"  #Subir al historico repositorio (local)
+
+git log --oneline --decorate #Lista los commits cos sus ids (historico)
+
+git checkout 161abde5d9ab36e5f892faa1d6b40b149b019d38  #Trae la version marcada por el commit id
+
+git checkout -b pepe #Crea nuevo branch pepe
+
+git checkout master #Trae y vuelve a la version previa de la rama master
+
+git checkout pepe #Trae y vuelve a la version previa de la rama pepe
+
+git branch -a #Listado de ramas y saber en cual se está
+
+git tag 1.0.0 1b2e1d63ff #Etiqueta version sobre un commit determinado
+
+
+
+git remote add origin /home/mobaxterm/prugit/dir1/ #Conectar a repositorio remoto
+
+git push #Actualiza el repositorio remoto con el último commit
+
+----------------------------------------------------------------------------
+Nos metemos en el directorio corresppondiente y:
+git status Para ver si hay cosas que subir
+
+Siempre es conveniente hacer (tanto para el caso de procesar ficheros modificadso como nuevos ficheros)
+git add .
+git commit -a -m "Etiqueta subida"  #Subir al historico repositorio (local)
+
+Para subir la rama por defecto (normalmente master)
+git push
+
+Para subir la rama llamada newserver
+git push origin newserver 
+
+Si le hemos puesto tags hay que subirlos tambien
+git push --tags
+
+
+
+Para listar las ramas remotas
+git branch -r
+responde algo asi:
+  origin/HEAD -> origin/master
+  origin/fede
+  origin/master
+  origin/newserver
+
+
+
+Para ver detalles de una rama remota
+git log origin/newserver
+
+
+
+-------------------------------------------------------------------------------------
+sobre repositorios remotos
+https://git-scm.com/book/es/v1/Fundamentos-de-Git-Trabajando-con-repositorios-remotos
+https://git-scm.com/book/es/v1/Git-en-un-servidor-Poniendo-Git-en-un-Servidor
+
+
+
+
+

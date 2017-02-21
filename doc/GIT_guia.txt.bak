@@ -1,0 +1,20 @@
+git init  #Creacion de repositorio sobre un directorio. Solo se hace la primera vez al generarlo
+
+git commit -a -m "primera subida"  #Subir al historico repositorio (local)
+
+git log --oneline --decorate #Lista los commits cos sus ids (historico)
+
+git checkout 161abde5d9ab36e5f892faa1d6b40b149b019d38  #Trae la version marcada por el commit id
+
+git checkout -b pepe #Crea nuevo branch pepe
+
+git checkout master #Trae y vuelve a la version previa de la rama master
+
+git checkout pepe #Trae y vuelve a la version previa de la rama pepe
+
+git branch -a #Listado de ramas y saber en cual se está
+
+git tag 1.0.0 1b2e1d63ff #Etiqueta version sobre un commit determinado
+
+
+
