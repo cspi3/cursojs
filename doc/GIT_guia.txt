@@ -2,6 +2,8 @@ git init  #Creacion de repositorio sobre un directorio. Solo se hace la primera 
 
 git clone <ruta al repositorio> #Clonar (copiar) y hacer checkout del repositorio. No hace falta ni crear el directorio ni hacer git.init
 
+git remote add origin <--HTTPoSSH--> #Para asignar un repositorio remoto
+
 git init --bare --shared #Con este comendo se crea un repositorio vacio para ser compartido remotamente
 
 git commit -a -m "primera subida"  #Subir al historico repositorio (local)
