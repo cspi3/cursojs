@@ -1,18 +1,21 @@
+//Campo 0: OK/NOK -> Tren Funcionando/Tren no funcionando
+//Campo 1: D/N -> Tren diurno / tren nocturno
+//Campo 2: F/NF -> Tren fiestero / tren no fiestero
 
 var trenes=[
 ["OK","D","NF"],
 ["OK","D","NF"],
 ["OK","D","NF"],
-["OK","N","F"],
+["OK","D","NF"],
 ["NOK","D","NF"],
 ["NOK","D","NF"],
 ["NOK","D","NF"],
 ["NOK","D","NF"],
 ["OK","D","NF"],
+["OK","N","NF"],
 ["OK","D","NF"],
-["OK","D","NF"],
-["OK","D","NF"],
-["OK","D","NF"],
+["OK","N","NF"],
+["OK","D","F"],
 ];
 
 
