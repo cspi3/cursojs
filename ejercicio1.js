@@ -18,10 +18,10 @@ var trenes=[
 ["OK","D","F"],
 ];
 
-
+var operativos=0;
 
 function logger(element, index, array) {
-    if(element[0]=="OK") console.log("El tren número "+(index+1)+" esta funcionando");
+    if(element[0]=="OK") {console.log("El tren número "+(index+1)+" esta funcionando");++operativos;}
     else console.log("El tren número "+index+" no esta funcionando");
     if(element[1]=="N") console.log("El tren número "+(index+1)+" es nocturno");
     if(element[2]=="F") console.log("El tren número "+(index+1)+" es fiestero");
@@ -29,5 +29,6 @@ function logger(element, index, array) {
 }
 
 
-
 trenes.forEach(logger);
+console.log("Trenes funcionando: "+operativos);
+
