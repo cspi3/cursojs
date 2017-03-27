@@ -38,3 +38,35 @@ function peticionAjax(url) {
     peticionAjax("https://api.fantasydata.net/nfl/v2/JSON/PlayerSeasonStats/2015");
     
     
+    
+    -------------------------------------------
+    
+    
+    
+    
+    
+    
+    function peticionAjax(url) {
+        var xmlHttp = new XMLHttpRequest();
+
+        xmlHttp.onreadystatechange = function() {
+
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                console.info(JSON.parse(xmlHttp.responseText));
+            } else if (xmlHttp.readyState === 4 && xmlHttp.status === 404) {
+                console.error("ERROR! 404");
+                console.info(JSON.parse(xmlHttp.responseText));
+            }
+        };
+        xmlHttp.open("GET", url, true);
+        // Modificación de cabeceras
+        xmlHttp.setRequestHeader("X-FullContact-APIKey", "506d9c8a7aafae5a");
+        xmlHttp.send();
+    }
+
+    peticionAjax("https://api.fullcontact.com/v2/person.json?email=bart@fullcontact.com");
+    
+    
+    
+    
+    
