@@ -12,3 +12,29 @@ NOTAS
    http://graphql.org/learn/
 
 -datos.gob.es
+
+
+PETICION AJAX GET CON CABECERA:
+-------------------------------
+
+function peticionAjax(url) {
+        var xmlHttp = new XMLHttpRequest();
+
+        xmlHttp.onreadystatechange = function() {
+
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                console.info(JSON.parse(xmlHttp.responseText));
+            } else if (xmlHttp.readyState === 4 && xmlHttp.status === 404) {
+                console.error("ERROR! 404");
+                console.info(JSON.parse(xmlHttp.responseText));
+            }
+        };
+        xmlHttp.open("GET", url, true);
+        // Modificación de cabeceras
+        xmlHttp.setRequestHeader("Ocp-Apim-Subscription-Key", "8a1c6a354c884c658ff29a8636fd7c18");
+        xmlHttp.send();
+    }
+
+    peticionAjax("https://api.fantasydata.net/nfl/v2/JSON/PlayerSeasonStats/2015");
+    
+    
